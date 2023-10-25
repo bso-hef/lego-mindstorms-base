@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.bso-hef.java.examples</groupId>
-    <artifactId>LegoMindStormsBase</artifactId>
+    <artifactId>pcstore23</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -27,20 +27,10 @@
     </distributionManagement>
 
     <dependencyManagement>
-        <dependencies>
-            <!-- https://mvnrepository.com/artifact/com.github.bdeneuter/lejos-ev3-api -->
-            <dependency>
-                <groupId>com.github.bdeneuter</groupId>
-                <artifactId>lejos-ev3-api</artifactId>
-                <version>0.9.1-beta</version>
-            </dependency>
-        </dependencies>
+
     </dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>com.github.bdeneuter</groupId>
-            <artifactId>lejos-ev3-api</artifactId>
-        </dependency>
+
     </dependencies>
 
 
