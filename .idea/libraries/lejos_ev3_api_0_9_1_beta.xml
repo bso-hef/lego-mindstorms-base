@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lejos-ev3-api-0.9.1-beta">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/lejos-ev3-api-0.9.1-beta.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
