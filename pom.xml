@@ -27,10 +27,20 @@
     </distributionManagement>
 
     <dependencyManagement>
-
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/com.github.bdeneuter/lejos-ev3-api -->
+            <dependency>
+                <groupId>com.github.bdeneuter</groupId>
+                <artifactId>lejos-ev3-api</artifactId>
+                <version>0.9.1-beta</version>
+            </dependency>
+        </dependencies>
     </dependencyManagement>
     <dependencies>
-
+        <dependency>
+            <groupId>com.github.bdeneuter</groupId>
+            <artifactId>lejos-ev3-api</artifactId>
+        </dependency>
     </dependencies>
 
 
