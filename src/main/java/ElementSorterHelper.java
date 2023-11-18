@@ -5,17 +5,16 @@ import lejos.utility.Delay;
 
 public class ElementSorterHelper {
 
-    private static int SENSOR_RETRY_TIMEOUT = 200;
+    private static final int SENSOR_RETRY_TIMEOUT = 200;
 
     /**
      * Helper method to wait until the given button is pressed.<br/>
      * Code example:<br/>
      * <code>ElementSorterHelper.waitUntilButtonPressed(buttonS1);</code>
      *
-     * @param button
+     * @param button, an object of EV3TouchSensor that is connected to any sensor port
      */
     public static void waitUntilButtonPressed(EV3TouchSensor button) {
-        SampleProvider sample = button.getMode("Touch");
         final SampleProvider sampleProvider = button.getTouchMode();
         int touchValue = 0;
 
@@ -41,14 +40,13 @@ public class ElementSorterHelper {
      * float distance = ElementSorterHelper.getDistance(ultrasonicSensor);</code>
      *
      * @return the distance measured by EV3UltrasonicSensor
-     * @Parameter ultrasonicSensor, an EV3UltrasonicSensor object that is connected to any Sensor Port
+     * @param ultrasonicSensor, an EV3UltrasonicSensor object that is connected to any Sensor Port
      */
     public static float getDistance(EV3UltrasonicSensor ultrasonicSensor) {
         SampleProvider ultrasonicSampleProvider = ultrasonicSensor.getDistanceMode();
         float[] sampleValue = new float[ultrasonicSampleProvider.sampleSize()];
         ultrasonicSampleProvider.fetchSample(sampleValue, 0);
-        float distance = (float) sampleValue[0];
-        return distance;
+        return sampleValue[0];
     }
 
     /**
@@ -82,7 +80,7 @@ public class ElementSorterHelper {
 
         public final int colorID;
 
-        private ElementColor(int colorID) {
+        ElementColor(int colorID) {
             this.colorID = colorID;
         }
 
