@@ -32,13 +32,19 @@ public class ElementSorterHelper {
 
     /**
      * Returns the distance in meters.<br/>
-     * CodeExample:<br/>
-     * <code>float distance = ElementSorterHelper.getDistance(ultrasonicSensorS3);</code>
+     * <br/>
+     * Code Example:<br/>
+     * <code>//Creates an Objekt of the class EV3UltrasonicSensor that is connected to<br/>
+     * //an EV3UltrasonicSensor at Port 3<br/>
+     * EV3UltrasonicSensor ultrasonicSensor = new EV3UltrasonicSensor(SensorPort.S3);<br/>
+     * //ließt den Abstand des Sensors aus.<br/>
+     * float distance = ElementSorterHelper.getDistance(ultrasonicSensor);</code>
      *
-     * @return
+     * @return the distance measured by EV3UltrasonicSensor
+     * @Parameter ultrasonicSensor, an EV3UltrasonicSensor object that is connected to any Sensor Port
      */
-    public static float getDistance(EV3UltrasonicSensor ultrasonicSensorS3) {
-        SampleProvider ultrasonicSampleProvider = ultrasonicSensorS3.getDistanceMode();
+    public static float getDistance(EV3UltrasonicSensor ultrasonicSensor) {
+        SampleProvider ultrasonicSampleProvider = ultrasonicSensor.getDistanceMode();
         float[] sampleValue = new float[ultrasonicSampleProvider.sampleSize()];
         ultrasonicSampleProvider.fetchSample(sampleValue, 0);
         float distance = (float) sampleValue[0];
@@ -49,11 +55,11 @@ public class ElementSorterHelper {
      * Class to encapsulate the color numbers of a sensor.
      * Code example:<br/>
      * <code><br/>
-     *     ElementSorterHelper.ElementColor elementColor = ElementSorterHelper.ElementColor.byValue(color)<br/>
-     *
-     *     if(elementColor == ElementSorterHelper.ElementColor.RED) {<br/>
-     *         ...<br/>
-     *     }<br/>
+     * ElementSorterHelper.ElementColor elementColor = ElementSorterHelper.ElementColor.byValue(color)<br/>
+     * <p>
+     * if(elementColor == ElementSorterHelper.ElementColor.RED) {<br/>
+     * ...<br/>
+     * }<br/>
      * </code>
      */
     public enum ElementColor {
