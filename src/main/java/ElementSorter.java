@@ -28,7 +28,7 @@ public class ElementSorter {
      */
     public static void main(String[] args) throws MalformedURLException, NotBoundException, RemoteException {
 
-        Brick brick = new RemoteEV3("10.49.128.207");
+        Brick brick = new RemoteEV3("10.49.128.167");
         brick.setDefault();
         final EV3UltrasonicSensor ultrasonicSensorS3 = new EV3UltrasonicSensor(SensorPort.S3);
 
@@ -44,6 +44,7 @@ public class ElementSorter {
             LCD.drawString("drücken", 0, 5);
         }
         Delay.msDelay(2000);
+        ultrasonicSensorS3.close();
 
         //EV3MediumRegulatedMotor motorRelease = new EV3MediumRegulatedMotor();
         //motorRelease.rotate();
