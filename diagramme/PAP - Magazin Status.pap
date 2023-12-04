@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FRAME GUID="2FB25471-B62C-4EE6-BD43-F819C095ACF8" FORMAT="0000" APP_VERSION="2.2.0.8" CHECKSUM="6C7AFF9AF336BB0B">
+  <PROJECT FORMAT="1.00" NAME="Ablaufplan Lego Mindstorm" AUTHOR="lmuenster1101" CREATED="2023.11.20 11:34:59" MODIFIED="2023.11.27 10:16:54">
+    <DIAGRAMS>
+      <DIAGRAM FORMAT="1.00" ID="0" NAME="Hauptprogramm 1" CREATED="2023.11.20 11:35:13" MODIFIED="2023.11.20 12:02:16">
+        <LAYOUT FORMAT="1.00" COLUMNS="2" ROWS="7">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Hauptprogramm 1]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="42">
+                <TEXT><![CDATA[Wert auslesen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Wert >= 0.045]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Ausgabe von "Zum Starten: Knopf drücken"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="6">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="44">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="48">
+                <TEXT><![CDATA[Ausgabe von "Teile einlegen"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="50">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="42" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="5" FROM="4" TO="12" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="54" FROM="50" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="52" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="51" FROM="48" TO="50" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="49" FROM="12" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="42" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="45" FROM="4" TO="44" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="47" FROM="44" TO="48" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+      <DIAGRAM FORMAT="1.00" ID="1" NAME="Hauptprogramm 2" CREATED="2023.11.20 11:35:13" MODIFIED="2023.11.20 12:02:16">
+        <LAYOUT FORMAT="1.00" COLUMNS="3" ROWS="7">
+          <ENTRIES>
+            <ENTRY COLUMN="0" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="61">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="12">
+                <TEXT><![CDATA[Ausgabe von "Zum Starten: Knopf drücken"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="0" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="58">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="0" ANCHOR="True">
+              <FIGURE SUBTYPE="PapTitle" FORMAT="1.00" ID="0">
+                <TEXT><![CDATA[Hauptprogramm 2]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="1">
+              <FIGURE SUBTYPE="PapStart" FORMAT="1.00" ID="1">
+                <TEXT><![CDATA[Start]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="2">
+              <FIGURE SUBTYPE="PapInput" FORMAT="1.00" ID="42">
+                <TEXT><![CDATA[Wert auslesen]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="3">
+              <FIGURE SUBTYPE="PapCondition" FORMAT="1.00" ID="4">
+                <TEXT><![CDATA[Wert >= 0.045]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="52">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="1" ROW="6">
+              <FIGURE SUBTYPE="PapEnd" FORMAT="1.00" ID="2">
+                <TEXT><![CDATA[Ende]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="3">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="44">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="4">
+              <FIGURE SUBTYPE="PapOutput" FORMAT="1.00" ID="48">
+                <TEXT><![CDATA[Ausgabe von "Teile einlegen"]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+            <ENTRY COLUMN="2" ROW="5">
+              <FIGURE SUBTYPE="PapConnector" FORMAT="1.00" ID="50">
+                <TEXT><![CDATA[]]></TEXT>
+              </FIGURE>
+            </ENTRY>
+          </ENTRIES>
+        </LAYOUT>
+        <CONNECTIONS>
+          <CONNECTION FORMAT="1.00" ID="3" FROM="1" TO="42" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="62" FROM="4" TO="61" TEXT="ja" />
+          <CONNECTION FORMAT="1.00" ID="54" FROM="50" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="53" FROM="52" TO="2" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="51" FROM="48" TO="50" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="60" FROM="58" TO="52" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="43" FROM="42" TO="4" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="45" FROM="4" TO="44" TEXT="nein" />
+          <CONNECTION FORMAT="1.00" ID="47" FROM="44" TO="48" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="57" FROM="12" TO="58" TEXT="" />
+          <CONNECTION FORMAT="1.00" ID="63" FROM="61" TO="12" TEXT="" />
+        </CONNECTIONS>
+      </DIAGRAM>
+    </DIAGRAMS>
+  </PROJECT>
+</FRAME>
