@@ -1,16 +1,9 @@
-import lejos.hardware.Brick;
 import lejos.hardware.lcd.LCD;
-import lejos.hardware.motor.EV3LargeRegulatedMotor;
 import lejos.hardware.motor.EV3MediumRegulatedMotor;
 import lejos.hardware.port.MotorPort;
-import lejos.hardware.port.Port;
 import lejos.hardware.port.SensorPort;
 import lejos.hardware.sensor.EV3ColorSensor;
-import lejos.hardware.sensor.EV3TouchSensor;
 import lejos.hardware.sensor.EV3UltrasonicSensor;
-import lejos.remote.ev3.RemoteEV3;
-import lejos.robotics.ColorAdapter;
-import lejos.robotics.RegulatedMotor;
 import lejos.utility.Delay;
 
 import java.net.MalformedURLException;
@@ -28,9 +21,10 @@ public class ElementSorter {
      */
     public static void main(String[] args) throws MalformedURLException, NotBoundException, RemoteException {
 
-        Brick brick = new RemoteEV3("10.49.128.167");
-        brick.setDefault();
-        final EV3UltrasonicSensor ultrasonicSensorS3 = new EV3UltrasonicSensor(SensorPort.S3);
+        EV3UltrasonicSensor ultrasonicSensorS3 = new EV3UltrasonicSensor(SensorPort.S3);
+        EV3MediumRegulatedMotor motorRelease = new EV3MediumRegulatedMotor(MotorPort.A);
+        EV3MediumRegulatedMotor convoyBelt = new EV3MediumRegulatedMotor(MotorPort.B);
+        EV3ColorSensor colorSensor = new EV3ColorSensor(SensorPort.S2);
 
         float distance = ElementSorterHelper.getDistance(ultrasonicSensorS3);
         LCD.drawString("Distance:" + distance, 0, 4);
@@ -46,8 +40,19 @@ public class ElementSorter {
         Delay.msDelay(2000);
         ultrasonicSensorS3.close();
 
-        //EV3MediumRegulatedMotor motorRelease = new EV3MediumRegulatedMotor();
-        //motorRelease.rotate();
+        motorRelease.rotate(360);
+        convoyBelt.rotate((int)2.25 * 360);
+
+        int colorID = colorSensor.getColorID();
+        EV3Color color = EV3Color.byValue(colorID);
+
+        //add code to print out the name of the detected color and the target basket
+        //GREEN: basket 1
+        //WHITE: basket 2
+        //BLACK: basket 2
+        //BLUE: basket 3
+        //RED: basket 3
+
     }
 
 }
