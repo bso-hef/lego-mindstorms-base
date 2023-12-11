@@ -11,7 +11,8 @@
     <properties>
         <!-- username without spaces       -->
         <user.name>SCSE</user.name>
-        <ev3.ip>192.168.2.216</ev3.ip>
+        <ev3.ip>10.49.128.179</ev3.ip>
+        <project.classname>ElementSorter</project.classname>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>7</maven.compiler.source>
@@ -64,11 +65,11 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        HelloEV3
+                                        ${project.classname}
                                     </mainClass>
                                 </manifest>
                             </archive>
-                            <finalName>HelloEV3-${project.version}-${user.name}</finalName>
+                            <finalName>${user.name}-${project.classname}-${project.version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                             <filters>
                             </filters>
@@ -101,7 +102,7 @@
                             <goal>upload-single</goal>
                         </goals>
                         <configuration>
-                            <fromFile>${project.build.directory}/HelloEV3-${project.version}-${user.name}.jar</fromFile>
+                            <fromFile>${project.build.directory}/${user.name}-${project.classname}-${project.version}.jar</fromFile>
                             <url>scp://root@${ev3.ip}/home/lejos/programs</url>
                         </configuration>
                     </execution>
